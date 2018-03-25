@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <form method="post" action="/e_test/csrf2/" >
+        {% csrf_token %}
+        <input type="text" name="uname">
+        <input type="color">
+        <input type="submit" value="提交" >
+    </form>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<a href="{% url 'booktest:show' %}">显示</a>
+    通过颜色来区分奇偶行<hr><hr>
+    {{ hero.showname }}
+    {% for temp in hero_list %}
+        {% if forloop.counter|divisibleby:"2" %}
+        <li style="color: chartreuse">{{ forloop.counter }}:{{temp.showname  }}</li>
+        {% else %}
+        <li style="color: cornflowerblue">{{ forloop.counter }}:{{ temp.showname }}</li>
+        {% endif %}
+
+    {%empty%}
+        啥也没有找到
+    {% endfor %}
+</head>
+<body>
+
+</body>
+</html>
